@@ -26,22 +26,29 @@
         "README.md"
     ],
     "scripts": {
+        "build": "father-build",
         "commit-msg": "pig-fabric --hooks=commit-msg",
+        "dev": "father-build -w",
         "lint": "eslint src --ext .js,.jsx,.ts,.tsx --quiet && stylelint 'src/**/*.{less,css}'",
         "lint-fix": "eslint src --ext .js,.jsx,.ts,.tsx --quiet --fix && stylelint 'src/**/*.{less,css}' --fix",
         "pig-fabric:install": "pig-fabric install",
         "pre-commit": "pig-fabric --hooks=pre-commit && lint-staged",
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
-        "prepare": "npx husky install"
+        "prepare": "npx husky install",
+        "pub": "npm publish --access public"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,less,css,md}": "pretty-quick --staged",
         "*.{js,jsx,ts,tsx}": "eslint --fix --quiet",
         "*.{css,less}": "stylelint"
     },
+    "dependencies": {
+        "@babel/runtime": "^7.20.13"
+    },
     "devDependencies": {
         "@pigjs/fabric": "^1.0.0",
         "eslint": "7.32.0",
+        "father-build": "^1.22.5",
         "husky": "8.0.2",
         "lint-staged": "13.0.3",
         "prettier": "2.7.1",
