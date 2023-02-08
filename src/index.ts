@@ -3,9 +3,12 @@ export { getUrlParam } from './browser/getUrlParam';
 export { getUrlParams } from './browser/getUrlParams';
 export { setUrlParams } from './browser/setUrlParams';
 // language
-export { attachPropertiesToComponent } from './language/attachPropertiesToComponent';
+export { digitUppercase } from './language/digitUppercase';
+export { formatMoney } from './language/formatMoney';
+export { getObjectValue } from './language/getObjectValue';
 export { mergeProps } from './language/mergeProps';
 export { omit } from './language/omit';
+export { sleep } from './language/sleep';
 // type
 export { getType } from './type/getType';
 export { isArray } from './type/isArray';
