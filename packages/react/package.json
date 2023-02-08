@@ -1,0 +1,31 @@
+{
+    "name": "@pigjs/react-utils",
+    "version": "1.0.0",
+    "description": "> TODO: description",
+    "homepage": "https://github.com/pigjs/utils/tree/main/packages/type#readme",
+    "license": "ISC",
+    "author": "MrYeZiqing",
+    "main": "./lib/index.js",
+    "module": "./es/index.js",
+    "typings": "./es/index.d.ts",
+    "files": [
+        "lib",
+        "es"
+    ],
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.20.13",
+        "@pigjs/browser-utils": "^1.0.0",
+        "@pigjs/type-utils": "^1.0.0",
+        "classnames": "^2.3.2"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0",
+        "react-dom": ">=16.9.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmmirror.com/"
+    }
+}

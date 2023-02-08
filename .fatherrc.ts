@@ -8,5 +8,6 @@ export default {
         type: 'babel',
         lazy: true
     },
-    runtimeHelpers: true
+    runtimeHelpers: true,
+    pkgs: ['type', 'browser', 'react', 'utils']
 };
