@@ -2,6 +2,13 @@
     "name": "@pigjs/utils",
     "version": "1.0.1",
     "description": "前端公共方法库",
+    "keywords": [
+        "browser",
+        "react",
+        "hooks",
+        "type",
+        "utils"
+    ],
     "homepage": "https://github.com/pigjs/utils/tree/main/packages/utils#readme",
     "license": "ISC",
     "author": "MrYeZiqing",
@@ -12,15 +19,9 @@
         "lib",
         "es"
     ],
-    "keywords": [
-        "browser",
-        "react",
-        "hooks",
-        "type",
-        "utils"
-    ],
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
+        "build": "father",
+        "doctor": "father doctor"
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
