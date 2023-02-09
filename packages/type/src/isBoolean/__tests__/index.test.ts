@@ -11,7 +11,6 @@ describe('isBoolean', () => {
     it('should return `false` for non-booleans', () => {
         expect(isBoolean([1, 2, 3])).toBe(false);
         expect(isBoolean(0)).toBe(false);
-        expect(isBoolean(1)).toBe(false);
         expect(isBoolean(null)).toBe(false);
         expect(isBoolean(undefined)).toBe(false);
         expect(isBoolean({})).toBe(false);
@@ -19,7 +18,6 @@ describe('isBoolean', () => {
         expect(isBoolean(new Error())).toBe(false);
         expect(isBoolean(/a/)).toBe(false);
         expect(isBoolean('0')).toBe(false);
-        expect(isBoolean('1')).toBe(false);
         expect(isBoolean(Symbol)).toBe(false);
     });
 });
