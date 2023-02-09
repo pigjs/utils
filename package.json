@@ -38,7 +38,10 @@
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
         "prepare": "npx husky install",
         "pub": "npm run build && lerna publish",
-        "pub:no-build": "lerna publish"
+        "pub:no-build": "lerna publish",
+        "test": "umi-test",
+        "test:coverage": "umi-test --coverage",
+        "test:u": "umi-test -u"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,less,css,md}": "pretty-quick --staged",
@@ -50,7 +53,11 @@
     },
     "devDependencies": {
         "@pigjs/fabric": "^1.0.1",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^14.4.3",
         "@types/react": "^18.0.27",
+        "@umijs/test": "^3.5.34",
         "eslint": "7.32.0",
         "father-build": "^1.22.5",
         "husky": "8.0.2",
