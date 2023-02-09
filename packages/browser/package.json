@@ -23,7 +23,6 @@
         "@pigjs/type-utils": "^1.0.1"
     },
     "publishConfig": {
-        "registry": "https://registry.npmjs.org/",
-        "access": "public"
+        "registry": "https://registry.npmjs.org/"
     }
 }

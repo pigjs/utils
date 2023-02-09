@@ -37,8 +37,8 @@
         "pre-commit": "pig-fabric --hooks=pre-commit && lint-staged",
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
         "prepare": "npx husky install",
-        "pub": "npm run build && lerna publish",
-        "pub:no-build": "lerna publish",
+        "pub": "npm run build && lerna publish --no-verify-access",
+        "pub:no-build": "lerna publish --no-verify-access",
         "test": "umi-test",
         "test:coverage": "umi-test --coverage",
         "test:u": "umi-test -u"
