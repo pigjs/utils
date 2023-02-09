@@ -20,7 +20,8 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/type-utils": "^1.0.1"
+        "@pigjs/type-utils": "^1.0.1",
+        "qs": "^6.11.0"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"

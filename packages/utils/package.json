@@ -26,7 +26,8 @@
         "@babel/runtime": "^7.20.13",
         "@pigjs/browser-utils": "^1.0.1",
         "@pigjs/react-utils": "^1.0.1",
-        "@pigjs/type-utils": "^1.0.1"
+        "@pigjs/type-utils": "^1.0.1",
+        "lodash": "^4.17.21"
     },
     "peerDependencies": {
         "lodash": ">=4.0.0"
