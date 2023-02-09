@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/type-utils",
     "version": "1.0.0",
-    "description": "js 判断类型方法库",
+    "description": "js 判断类型方法",
     "homepage": "https://github.com/pigjs/utils/tree/main/packages/type#readme",
     "license": "ISC",
     "author": "MrYeZiqing",
@@ -12,6 +12,9 @@
         "lib",
         "es"
     ],
+    "keywords": [
+        "type"
+    ],
     "scripts": {
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
@@ -19,6 +22,6 @@
         "@babel/runtime": "^7.20.13"
     },
     "publishConfig": {
-        "registry": "https://registry.npmmirror.com/"
+        "registry": "https://registry.npmjs.org/"
     }
 }
