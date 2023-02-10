@@ -23,6 +23,7 @@
         "@babel/runtime": "^7.20.13"
     },
     "publishConfig": {
-        "registry": "https://registry.npmjs.org/"
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
     }
 }
