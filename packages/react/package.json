@@ -1,6 +1,6 @@
 {
     "name": "@pigjs/react-utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "react 工具函数",
     "keywords": [
         "react",
@@ -22,8 +22,8 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/browser-utils": "^1.0.1",
-        "@pigjs/type-utils": "^1.0.1",
+        "@pigjs/browser-utils": "^1.0.2",
+        "@pigjs/type-utils": "^1.0.2",
         "classnames": "^2.3.2"
     },
     "peerDependencies": {
@@ -31,7 +31,7 @@
         "react-dom": ">=16.9.0"
     },
     "publishConfig": {
-        "registry": "https://registry.npmjs.org/",
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     }
 }
