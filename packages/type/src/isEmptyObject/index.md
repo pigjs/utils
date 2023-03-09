@@ -3,17 +3,16 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isEmptyObject
 
-检查输入值是否为 布尔值
+检查输入的值是否为 空对象
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isEmptyObject({}); //=>true
+isEmptyObject(Object({})); //=>true
+isEmptyObject({ length: 0 }); //=>false
 ```
 
 ### Params

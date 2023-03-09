@@ -5,29 +5,19 @@ nav:
 
 # isFunction
 
-是否是函数
+检查输入的值是否为 function
 
 ## API
 
 ```ts
-isFunction(() => {});
-// => true
-isFunction(Object(() => {}));
-// => true
-isFunction({});
-// => false
-isFunction(null);
-// => false
-isFunction([]);
-// => false
-isFunction(0);
-// => false
-isFunction('');
-// => false
+isFunction(() => {}); //=>true
+isFunction(Object(() => {})); //=>true
+isFunction(new Function()); //=>true
+isFunction(eval('()=>{}')); //=>true
 ```
 
 ### Params
 
-| 参数  | 说明         | 类型 | 默认值 |
-| ----- | ------------ | ---- | ------ |
-| value | 要判断的数据 | any  | -      |
+| 参数  | 说明   | 类型 | 默认值 |
+| ----- | ------ | ---- | ------ |
+| value | 输入值 | any  | -      |

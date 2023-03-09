@@ -1,6 +1,12 @@
-import { getType } from '../getType';
+import { getType } from '../_getType';
 
-/** 是否是 File */
-export function isFile(data: any): data is File {
-    return getType(data) === 'File';
+/**
+ * 检查输入的值是否为 File
+ *
+ * @example
+ *
+ *  isFile(file); //=>true
+ */
+export function isFile(value: any): value is File {
+    return getType(value) === 'File';
 }

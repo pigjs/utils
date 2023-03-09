@@ -1,6 +1,14 @@
 import { isObject } from '../isObject';
 
-/** 是否是空对象 */
-export function isEmptyObject(data: any) {
-    return isObject(data) && Object.keys(data).length === 0;
+/**
+ * 检查输入的值是否为 空对象
+ *
+ * @example
+ *
+ * isEmptyObject({}); //=>true
+ * isEmptyObject(Object({})); //=>true
+ * isEmptyObject({length:0}); //=>false
+ */
+export function isEmptyObject(value: any) {
+    return isObject(value) && Object.keys(value).length === 0;
 }

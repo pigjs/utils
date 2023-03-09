@@ -3,17 +3,17 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isNil
 
-检查输入值是否为 布尔值
+检查输入值是否为 'null' 或 'undefined'
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isNil(null); //=> true
+isNil(undefined); //=> true
+isNil('0'); //=> false
+isNil([]); //=> false
 ```
 
 ### Params

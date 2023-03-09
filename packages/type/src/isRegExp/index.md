@@ -3,17 +3,15 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isRegExp
 
-检查输入值是否为 布尔值
+检查输入的值是否为 正则
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isRegExp(/a/); //=>true
+isRegExp(new RegExp(/a/)); //=>true
 ```
 
 ### Params

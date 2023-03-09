@@ -1,6 +1,13 @@
-import { getType } from '../getType';
+import { getType } from '../_getType';
 
-/** 是否是 正则 */
-export function isRegExp(data: any): data is RegExp {
-    return getType(data) === 'RegExp';
+/**
+ * 检查输入的值是否为 正则
+ *
+ * @example
+ *
+ *  isRegExp(/a/); //=>true
+ *  isRegExp(new RegExp(/a/)); //=>true
+ */
+export function isRegExp(value: any): value is RegExp {
+    return getType(value) === 'RegExp';
 }

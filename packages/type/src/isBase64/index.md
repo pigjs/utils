@@ -3,17 +3,14 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isBase64
 
-检查输入值是否为 布尔值
+检查输入值是否为 base64 字符串
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isBase(base64); // => true
 ```
 
 ### Params

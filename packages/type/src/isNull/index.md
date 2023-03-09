@@ -3,17 +3,15 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isNull
 
-检查输入值是否为 布尔值
+检查输入的值是否为 null
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isNull(null); //=>true
+isNull(undefined); //=>false
 ```
 
 ### Params

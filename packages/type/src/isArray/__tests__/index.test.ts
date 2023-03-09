@@ -11,7 +11,7 @@ describe('isArray', () => {
         expect(isArray(0)).toBe(false);
         expect(isArray(null)).toBe(false);
         expect(isArray(undefined)).toBe(false);
-        expect(isArray({})).toBe(false);
+        expect(isArray({ length: 0 })).toBe(false);
         expect(isArray(new Date())).toBe(false);
         expect(isArray(new Error())).toBe(false);
         expect(isArray(/a/)).toBe(false);

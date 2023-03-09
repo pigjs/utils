@@ -1,12 +1,13 @@
 import { isObject } from '../index';
 
 describe('isObject', () => {
-    it('should return `true` for null', () => {
+    it('should return `true` for object', () => {
         expect(isObject({})).toBe(true);
         expect(isObject(Object({}))).toBe(true);
+        expect(isObject(Object({ length: 0 }))).toBe(true);
     });
 
-    it('should return `false` for non-null', () => {
+    it('should return `false` for non-object', () => {
         expect(isObject([1, 2, 3])).toBe(false);
         expect(isObject(0)).toBe(false);
         expect(isObject(undefined)).toBe(false);

@@ -1,11 +1,11 @@
 {
-    "name": "@pigjs/type-utils",
-    "version": "1.0.2",
-    "description": "js 检查类型方法",
+    "name": "@pigjs/practical-utils",
+    "version": "1.0.0",
+    "description": "js 实用方法",
     "keywords": [
-        "type"
+        "practical"
     ],
-    "homepage": "https://github.com/pigjs/utils/tree/main/packages/type#readme",
+    "homepage": "https://github.com/pigjs/utils/tree/main/packages/practical#readme",
     "license": "ISC",
     "author": "MrYeZiqing",
     "main": "./lib/index.js",
@@ -20,7 +20,11 @@
         "doctor": "father doctor"
     },
     "dependencies": {
-        "@babel/runtime": "^7.20.13"
+        "@babel/runtime": "^7.20.13",
+        "@pigjs/type-utils": "workspace:^1.0.2"
+    },
+    "peerDependencies": {
+        "lodash": ">=4.0.0"
     },
     "publishConfig": {
         "access": "public",

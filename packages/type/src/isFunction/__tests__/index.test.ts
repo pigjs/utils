@@ -4,6 +4,8 @@ describe('isFunction', () => {
     it('should return `true` for function', () => {
         expect(isFunction(() => {})).toBe(true);
         expect(isFunction(Object(() => {}))).toBe(true);
+        expect(isFunction(new Function())).toBe(true);
+        expect(isFunction(eval('()=>{}'))).toBe(true);
     });
 
     it('should return `false` for non-function', () => {

@@ -1,6 +1,12 @@
-import { getType } from '../getType';
+import { getType } from '../_getType';
 
-/** 是否是 Blob */
-export function isBlob(data: any): data is Blob {
-    return getType(data) === 'Blob';
+/**
+ * 检查输入值是否为 Blob
+ *
+ * @example
+ *
+ *  isBlob(new Blob()); //=>true
+ */
+export function isBlob(value: any): value is Blob {
+    return getType(value) === 'Blob';
 }

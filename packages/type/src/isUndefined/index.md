@@ -3,17 +3,15 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isUndefined
 
-检查输入值是否为 布尔值
+检查输入的值是否为 undefined
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isUndefined(undefined); //=>true
+isUndefined(null); //=>false
 ```
 
 ### Params

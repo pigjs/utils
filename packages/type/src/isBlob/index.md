@@ -3,17 +3,15 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isBlob
 
-检查输入值是否为 布尔值
+检查输入值是否为 Blob
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isBlob(new Blob());
+// => true
 ```
 
 ### Params

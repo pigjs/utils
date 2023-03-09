@@ -20,18 +20,15 @@
         "es"
     ],
     "scripts": {
-        "build": "father",
+        "build": "father build",
         "doctor": "father doctor"
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/browser-utils": "^1.0.2",
-        "@pigjs/react-utils": "^1.0.2",
-        "@pigjs/type-utils": "^1.0.2",
-        "lodash": "^4.17.21"
-    },
-    "peerDependencies": {
-        "lodash": ">=4.0.0"
+        "@pigjs/browser-utils": "workspace:^1.0.2",
+        "@pigjs/practical-utils": "workspace:^1.0.0",
+        "@pigjs/react-utils": "workspace:^1.0.2",
+        "@pigjs/type-utils": "workspace:^1.0.2"
     },
     "publishConfig": {
         "access": "public",

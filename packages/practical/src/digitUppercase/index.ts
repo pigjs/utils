@@ -3,7 +3,7 @@ import { isNumber } from '@pigjs/type-utils';
 /** 金额大写 */
 export function digitUppercase(money: number | string): undefined | string {
     let data = Number(money);
-    if (isNumber(data)) {
+    if (!isNumber(data)) {
         return undefined;
     }
     const fraction = ['角', '分'];

@@ -1,4 +1,3 @@
-export { getType } from './getType';
 export { isArray } from './isArray';
 export { isBase64 } from './isBase64';
 export { isBlob } from './isBlob';

@@ -1,6 +1,7 @@
 {
     "name": "@pigjs/utils",
     "version": "1.0.0",
+    "private": true,
     "description": "前端公共方法库",
     "keywords": [
         "utils",
@@ -29,11 +30,12 @@
         "packages/*"
     ],
     "scripts": {
-        "bootstrap": "lerna bootstrap",
         "build": "lerna run build",
+        "clear": "rimraf packages/*/{es,lib,node_modules} && rimraf node_modules",
         "commit-msg": "pig-fabric --hooks=commit-msg",
         "doctor": "lerna run doctor",
-        "init": "rimraf node_modules && npm run clean && npm run bootstrap",
+        "init": "npm run clear && pnpm install && npm run build",
+        "preinstall": "npx only-allow pnpm",
         "lint": "eslint src --ext .js,.jsx,.ts,.tsx --quiet && stylelint 'src/**/*.{less,css}'",
         "lint-fix": "eslint src --ext .js,.jsx,.ts,.tsx --quiet --fix && stylelint 'src/**/*.{less,css}' --fix",
         "pig-fabric:install": "pig-fabric install",
@@ -52,7 +54,8 @@
         "*.{css,less}": "stylelint"
     },
     "dependencies": {
-        "@babel/runtime": "^7.20.13"
+        "@babel/runtime": "^7.20.13",
+        "@types/jest": "^29.4.0"
     },
     "devDependencies": {
         "@pigjs/fabric": "^1.0.1",

@@ -3,17 +3,16 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isNumber
 
-检查输入值是否为 布尔值
+检查输入的值是否为 数字 不包括 NaN
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isNumber(0); //=>true
+isNumber(Object(0)); //=>true
+isNumber(NaN); //=>false
 ```
 
 ### Params

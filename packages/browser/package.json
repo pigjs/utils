@@ -16,7 +16,7 @@
         "es"
     ],
     "scripts": {
-        "build": "father",
+        "build": "father build",
         "doctor": "father doctor"
     },
     "dependencies": {

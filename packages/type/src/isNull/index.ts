@@ -1,4 +1,11 @@
-/** 是否是 null */
-export function isNull(data: any): data is null {
-    return data === null;
+/**
+ * 检查输入的值是否为 null
+ *
+ * @example
+ *
+ *  isNull(null); //=>true
+ *  isNull(undefined); //=>false
+ */
+export function isNull(value: any): value is null {
+    return value === null;
 }

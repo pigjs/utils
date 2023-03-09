@@ -1,6 +1,13 @@
-import { getType } from '../getType';
+import { getType } from '../_getType';
 
-/** 是否是一个字符串 */
-export function isString(data: any): data is string {
-    return getType(data) === 'String';
+/**
+ * 检查输入的值是否为 字符串
+ *
+ * @example
+ *
+ *  isString('0'); //=>true
+ *  isString(Object('0')); //=>true
+ */
+export function isString(value: any): value is string {
+    return getType(value) === 'String';
 }

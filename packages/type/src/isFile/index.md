@@ -3,17 +3,14 @@ nav:
     path: /type
 ---
 
-# isBoolean
+# isFile
 
-检查输入值是否为 布尔值
+检查输入的值是否为 File
 
 ## API
 
 ```ts
-isBoolean(true); //=>true
-isBoolean(false); //=>true
-isBoolean(Object(true)); //=>true
-isBoolean(Object(false)); //=>true
+isFile(file); //=>true
 ```
 
 ### Params

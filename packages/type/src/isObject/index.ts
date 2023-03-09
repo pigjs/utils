@@ -1,6 +1,15 @@
-import { getType } from '../getType';
+import { getType } from '../_getType';
 
-/** 是否是对象 */
-export function isObject(data: any): data is Record<string, any> {
-    return getType(data) === 'Object';
+/**
+ * 检查输入的值是否为 对象
+ *
+ * @example
+ *
+ *  isObject({}); //=>true
+ *  isObject(Object({})); //=>true
+ *  isObject({length:0}); //=>true
+ *  isObject(null); //=>false
+ */
+export function isObject(value: any): value is Record<string, any> {
+    return getType(value) === 'Object';
 }
