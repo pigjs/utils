@@ -1,5 +1,7 @@
 ---
-nav:
+title: isBase64
+group:
+    title: 类型
     path: /type
 ---
 

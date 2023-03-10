@@ -1,5 +1,7 @@
 ---
-nav:
+title: isEmptyString
+group:
+    title: 类型
     path: /type
 ---
 

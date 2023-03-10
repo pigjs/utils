@@ -1,5 +1,7 @@
 ---
-nav:
+title: isBlob
+group:
+    title: 类型
     path: /type
 ---
 

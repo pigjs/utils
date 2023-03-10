@@ -1,5 +1,7 @@
 ---
-nav:
+title: isRegExp
+group:
+    title: 类型
     path: /type
 ---
 

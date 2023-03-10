@@ -1,5 +1,7 @@
 ---
-nav:
+title: isFile
+group:
+    title: 类型
     path: /type
 ---
 

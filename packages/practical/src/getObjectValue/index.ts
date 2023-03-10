@@ -1,9 +1,17 @@
 import { isEmptyObject, isUndefined } from '@pigjs/type-utils';
 
-/** 对象安全取值 getObjectValue(data,'a.b.c') */
-export function getObjectValue(data: Record<any, any>, key: string, emptyValue?: any) {
+/**
+ * 对象安全取值
+ *
+ * @example
+ *
+ *  getObjectValue({a:{b:{c:1}}},'a.b.c'); //=> 1
+ *  getObjectValue({a:{b:{c:1}}},'a.b.d'); //=> undefined
+ *  getObjectValue(data, 'a.b.c.d'); //=> undefined
+ */
+export function getObjectValue(data: Record<any, any>, key: string) {
     if (isEmptyObject(data)) {
-        return emptyValue;
+        return undefined;
     }
 
     const namespace = key.toString().split('.');
@@ -14,7 +22,7 @@ export function getObjectValue(data: Record<any, any>, key: string, emptyValue?:
     for (; i < len; i++) {
         value = clone[namespace[i]];
         if (isUndefined(value)) {
-            return emptyValue;
+            return undefined;
         }
         clone = value;
     }

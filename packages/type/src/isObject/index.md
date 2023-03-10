@@ -1,5 +1,7 @@
 ---
-nav:
+title: isObject
+group:
+    title: 类型
     path: /type
 ---
 

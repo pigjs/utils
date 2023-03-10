@@ -2,11 +2,15 @@ import { isUndefined } from '@pigjs/type-utils';
 import assign from 'lodash/assign';
 import assignWith from 'lodash/assignWith';
 
-export function mergeProps<A, B>(a: A, b: B): B & A;
-export function mergeProps<A, B, C>(a: A, b: B, c: C): C & B & A;
-
-/** 合并props */
-export function mergeProps(...items: any[]) {
+/**
+ * 合并props
+ *
+ * @example
+ *
+ *  mergeProps({age:24},{name:'pigjs'}); //=> {name:'pigjs',age:24}
+ *  mergeProps({age:24,name:'pigjs'},{age:22,name:null}); //=> {age:22,name:null}
+ */
+export function mergeProps<A, B>(...items: any[]): B & A {
     function customizer(objValue: any, srcValue: any) {
         return isUndefined(srcValue) ? objValue : srcValue;
     }

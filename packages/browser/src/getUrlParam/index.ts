@@ -1,6 +1,13 @@
 import { isNull } from '@pigjs/type-utils';
 
-/** 获取url参数 */
+/**
+ * 获取url参数
+ *
+ * @example
+ *
+ *  getUrlParam('id'); //=> id
+ *  getUrlParam('name'); //=> null
+ */
 export function getUrlParam(name: string): null | string {
     const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
     const r =

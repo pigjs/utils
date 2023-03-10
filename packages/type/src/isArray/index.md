@@ -1,5 +1,7 @@
 ---
-nav:
+title: isArray
+group:
+    title: 类型
     path: /type
 ---
 

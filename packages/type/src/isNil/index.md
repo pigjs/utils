@@ -1,5 +1,7 @@
 ---
-nav:
+title: isNil
+group:
+    title: 类型
     path: /type
 ---
 

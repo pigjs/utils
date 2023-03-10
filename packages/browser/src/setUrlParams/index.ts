@@ -2,7 +2,16 @@ import { isEmptyString, isNull, isUndefined } from '@pigjs/type-utils';
 import qs from 'qs';
 import { getUrlParams } from '../getUrlParams';
 
-/** 设置url参数 合并url上参数后会自动忽略 空字符串 null undefined，也可以自定义 filter 忽略 */
+/**
+ * 设置url参数
+ * 合并url上参数后会自动忽略 空字符串 null undefined，
+ * 也可以自定义 filter 忽略
+ *
+ * @example
+ *
+ *  setUrlParams({name:'xxx'})
+ *  setUrlParams({name:'xxx'},(params)=>params)
+ */
 export function setUrlParams(data: Record<any, any> = {}, filter?: (params: Record<any, any>) => Record<any, any>) {
     let params = getUrlParams();
     params = { ...params, ...data };

@@ -1,5 +1,7 @@
 ---
-nav:
+title: isBoolean
+group:
+    title: 类型
     path: /type
 ---
 

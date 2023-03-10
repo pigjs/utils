@@ -1,5 +1,7 @@
 ---
-nav:
+title: isNumber
+group:
+    title: 类型
     path: /type
 ---
 
