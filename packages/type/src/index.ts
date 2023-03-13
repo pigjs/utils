@@ -8,6 +8,7 @@ export { isEmptyObject } from './isEmptyObject';
 export { isEmptyString } from './isEmptyString';
 export { isFile } from './isFile';
 export { isFunction } from './isFunction';
+export { isNil } from './isNil';
 export { isNull } from './isNull';
 export { isNumber } from './isNumber';
 export { isObject } from './isObject';

@@ -7,8 +7,14 @@ const eventToPropRecord: Record<PropagationEvent, string> = {
     click: 'onClick'
 };
 
-/** 阻止组件事件冒泡 */
-export function withStopPropagation(events: PropagationEvent[], element: ReactElement) {
+/**
+ * 阻止组件事件冒泡
+ *
+ * @example
+ *
+ *  withStopPropagation(<div>xxx</div>,['click'])
+ */
+export function withStopPropagation(element: ReactElement, events: string[] = ['click']) {
     const props: Record<string, any> = { ...element.props };
     for (const key of events) {
         const prop = eventToPropRecord[key];

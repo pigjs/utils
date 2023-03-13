@@ -6,7 +6,8 @@ module.exports = {
     collectCoverageFrom: [
         'packages/**/src/**/*.{ts,tsx}',
         '!packages/**/src/**/__test__/__snapshots__',
-        '!packages/**/src/**/demos/**'
+        '!packages/**/src/**/demos/**',
+        '!packages/**/src/index.ts'
     ],
     // 设置单元测试覆盖率阀值
     coverageThreshold: {

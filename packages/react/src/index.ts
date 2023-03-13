@@ -6,6 +6,7 @@ export { usePropsValue } from './usePropsValue';
 export { useSetState } from './useSetState';
 export { useUnmount } from './useUnmount';
 export { useUpdate } from './useUpdate';
-export { useUrlParams } from './useUrlParams';
+export { useUrlParam } from './useUrlParam';
+export { useUrlState } from './useUrlState';
 export { withNativeProps } from './withNativeProps';
 export { withStopPropagation } from './withStopPropagation';

@@ -1,24 +1,23 @@
 ---
-nav:
+title: getUrlParam
+group:
+    title: 浏览器
     path: /browser
 ---
 
-# getUsrParam
+# getUrlParam
 
 获取 url 参数
-
-## 代码演示
-
-### 基础用法
 
 ## API
 
 ```ts
-getUsrParam(name: string);
+getUrlParam('id'); //=> id
+getUrlParam('name'); //=> null
 ```
 
 ### Params
 
-| 参数 | 说明               | 类型     | 默认值 |
-| ---- | ------------------ | -------- | ------ |
-| name | 需要获取的参数名称 | `string` | -      |
+| 参数 | 说明                        | 类型   | 默认值 |
+| ---- | --------------------------- | ------ | ------ |
+| key  | 需要从 url 上获取的参数字段 | string | -      |

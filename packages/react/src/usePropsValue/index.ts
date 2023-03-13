@@ -3,12 +3,20 @@ import { useRef } from 'react';
 import { useEvent } from '../useEvent';
 import { useUpdate } from '../useUpdate';
 
-/** 数据双向绑定 */
-export function usePropsValue<T extends any>(options: {
-    value?: T;
-    defaultValue?: T;
-    onChange?: (value: T, ...args: any[]) => void;
-}): [T, (value: T, ...args: any[]) => void] {
+/**
+ * 数据双向绑定
+ *
+ * @example
+ *
+ * const [value,setValue] = usePropsValue(props)
+ */
+export function usePropsValue<T extends any>(
+    options: {
+        value?: T;
+        defaultValue?: T;
+        onChange?: (value: T, ...args: any[]) => void;
+    } = {}
+): [T, (value: T, ...args: any[]) => void] {
     const { value, defaultValue, onChange } = options;
 
     const update = useUpdate();
@@ -23,6 +31,9 @@ export function usePropsValue<T extends any>(options: {
 
     const setState = useEvent((v, ...args) => {
         const val = isFunction(v) ? v(stateRef.current) : v;
+        if (stateRef.current === v) {
+            return;
+        }
         if (!controlled) {
             stateRef.current = val;
             update();

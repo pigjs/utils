@@ -12,7 +12,7 @@ import { getUrlParams } from '../getUrlParams';
  *  setUrlParams({name:'xxx'})
  *  setUrlParams({name:'xxx'},(params)=>params)
  */
-export function setUrlParams(data: Record<any, any> = {}, filter?: (params: Record<any, any>) => Record<any, any>) {
+export function setUrlParams(data: Record<string, any> = {}, filter?: (params: Record<any, any>) => Record<any, any>) {
     let params = getUrlParams();
     params = { ...params, ...data };
     if (filter) {
@@ -35,7 +35,7 @@ export function setUrlParams(data: Record<any, any> = {}, filter?: (params: Reco
             .reduce((data, key) => {
                 return {
                     ...data,
-                    key: params[key]
+                    [key]: params[key]
                 };
             }, {});
     }
