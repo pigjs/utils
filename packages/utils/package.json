@@ -1,6 +1,6 @@
 {
     "name": "@pigjs/utils",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A front-end utils library for business scenarios",
     "keywords": [
         "browser",
@@ -31,10 +31,10 @@
     ],
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/browser-utils": "workspace:^1.0.2",
-        "@pigjs/practical-utils": "workspace:^1.0.0",
-        "@pigjs/react-utils": "workspace:^1.0.2",
-        "@pigjs/type-utils": "workspace:^1.0.2"
+        "@pigjs/browser-utils": "workspace:^1.0.3",
+        "@pigjs/practical-utils": "workspace:^1.0.1",
+        "@pigjs/react-utils": "workspace:^1.0.3",
+        "@pigjs/type-utils": "workspace:^1.0.3"
     },
     "publishConfig": {
         "access": "public",
