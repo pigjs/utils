@@ -1,11 +1,3 @@
-# `practical`
+# @pigjs/practical-utils
 
-> TODO: description
-
-## Usage
-
-```
-const practical = require('practical');
-
-// TODO: DEMONSTRATE API
-```
+See our website [@pigjs/utils](http://utils.pigjs.com/) for more information.

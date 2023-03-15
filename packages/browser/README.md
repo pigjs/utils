@@ -1,11 +1,3 @@
-# `browser`
+# @pigjs/browser-utils
 
-> TODO: description
-
-## Usage
-
-```
-const browser = require('browser');
-
-// TODO: DEMONSTRATE API
-```
+See our website [@pigjs/utils](http://utils.pigjs.com/) for more information.

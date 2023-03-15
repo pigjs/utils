@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/react-utils",
     "version": "1.0.2",
-    "description": "react 工具函数",
+    "description": "react utility function",
     "keywords": [
         "react",
         "hooks"

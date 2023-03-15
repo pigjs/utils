@@ -1,15 +1,14 @@
 ---
-title: isEmptyArray
+title: isEmptyArray 是否为空数组
 group:
     title: 类型
-    path: /type
 ---
 
 # isEmptyArray
 
 检查输入的值是否为 空数组
 
-## API
+#### 例子
 
 ```ts
 isEmptyArray([]); //=>true
@@ -18,8 +17,8 @@ isEmptyArray([0]); //=>false
 isEmptyArray({ length: 0 }); //=>false
 ```
 
-### Params
+#### 参数
 
-| 参数  | 说明   | 类型 | 默认值 |
-| ----- | ------ | ---- | ------ |
-| value | 输入值 | any  | -      |
+| 参数  |  说明  | 类型 | 默认值 |
+| :---: | :----: | :--: | :----: |
+| value | 输入值 | any  |   -    |

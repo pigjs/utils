@@ -2,12 +2,12 @@
     "name": "@pigjs/utils",
     "version": "1.0.0",
     "private": true,
-    "description": "前端公共方法库",
+    "description": "A front-end tool library for business scenarios",
     "keywords": [
         "utils",
         "hooks"
     ],
-    "homepage": "https://github.com/pigjs/utils#readme",
+    "homepage": "http://utils.pigjs.com",
     "bugs": {
         "url": "https://github.com/pigjs/utils/issues"
     },
@@ -31,8 +31,10 @@
     ],
     "scripts": {
         "build": "lerna run build",
+        "build:docs": "dumi build",
         "clear": "rimraf packages/*/{es,lib,node_modules} && rimraf node_modules",
         "commit-msg": "pig-fabric --hooks=commit-msg",
+        "deploy": "deploy --config=./scripts/deploy.js",
         "doctor": "lerna run doctor",
         "init": "npm run clear && pnpm install && npm run build",
         "preinstall": "npx only-allow pnpm",

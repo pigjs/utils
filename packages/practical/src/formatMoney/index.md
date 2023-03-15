@@ -1,5 +1,5 @@
 ---
-title: formatMoney
+title: formatMoney 金额添加千分号
 group:
     title: 实用函数
     path: /practical
@@ -23,6 +23,6 @@ formatMoney(0); //=> 0
 
 #### 参数
 
-| 参数  | 说明   | 类型             | 默认值 |
-| ----- | ------ | ---------------- | ------ |
-| value | 输入值 | number \| string | -      |
+| 参数  |  说明  |       类型       | 默认值 |
+| :---: | :----: | :--------------: | :----: |
+| value | 输入值 | number \| string |   -    |

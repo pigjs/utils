@@ -3,7 +3,7 @@ import { isString } from '@pigjs/type-utils';
 import React from 'react';
 
 /**
- * 获取url参数
+ * 获取 url 参数 hook
  *
  * @example
  *

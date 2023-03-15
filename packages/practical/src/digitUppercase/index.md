@@ -1,5 +1,5 @@
 ---
-title: digitUppercase
+title: digitUppercase 金额中文大写
 group:
     title: 实用函数
     path: /practical
@@ -20,6 +20,6 @@ digitUppercase(0); //=>零元整
 
 #### 参数
 
-| 参数  | 说明   | 类型             | 默认值 |
-| ----- | ------ | ---------------- | ------ |
-| value | 输入值 | number \| string | -      |
+| 参数  |  说明  |       类型       | 默认值 |
+| :---: | :----: | :--------------: | :----: |
+| value | 输入值 | number \| string |   -    |

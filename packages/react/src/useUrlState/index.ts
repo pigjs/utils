@@ -7,7 +7,7 @@ import { useSetState } from '../useSetState';
 import type { SetMergeStateType } from '../useSetState';
 
 /**
- * 管理url params 来管理 state 的 Hook
+ * 管理url参数状态 的 hook
  * 自动删除 'undefined' 'null' '空字符串'
  * @example
  *

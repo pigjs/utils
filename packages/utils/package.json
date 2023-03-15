@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/utils",
     "version": "1.0.2",
-    "description": "前端公共方法库",
+    "description": "A front-end utils library for business scenarios",
     "keywords": [
         "browser",
         "react",
@@ -23,6 +23,12 @@
         "build": "father build",
         "doctor": "father doctor"
     },
+    "browserslist": [
+        "last 2 version",
+        "Firefox ESR",
+        "> 1%",
+        "ie >= 9"
+    ],
     "dependencies": {
         "@babel/runtime": "^7.20.13",
         "@pigjs/browser-utils": "workspace:^1.0.2",

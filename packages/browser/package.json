@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/browser-utils",
     "version": "1.0.2",
-    "description": "浏览器相关的公共方法",
+    "description": "Browser utility method",
     "keywords": [
         "browser"
     ],

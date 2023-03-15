@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/type-utils",
     "version": "1.0.2",
-    "description": "js 检查类型方法",
+    "description": "js checks the type method",
     "keywords": [
         "type"
     ],

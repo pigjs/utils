@@ -1,7 +1,7 @@
 {
     "name": "@pigjs/practical-utils",
     "version": "1.0.0",
-    "description": "js 实用方法",
+    "description": "js utility method",
     "keywords": [
         "practical"
     ],

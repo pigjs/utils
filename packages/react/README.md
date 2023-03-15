@@ -1,11 +1,3 @@
-# `react`
+# @pigjs/react-utils
 
-> TODO: description
-
-## Usage
-
-```
-const react = require('react');
-
-// TODO: DEMONSTRATE API
-```
+See our website [@pigjs/utils](http://utils.pigjs.com/) for more information.

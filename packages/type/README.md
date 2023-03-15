@@ -1,11 +1,3 @@
-# `type`
+# @pigjs/type-utils
 
-> TODO: description
-
-## Usage
-
-```
-const type = require('type');
-
-// TODO: DEMONSTRATE API
-```
+See our website [@pigjs/utils](http://utils.pigjs.com/) for more information.

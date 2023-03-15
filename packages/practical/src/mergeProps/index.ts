@@ -3,7 +3,7 @@ import assign from 'lodash/assign';
 import assignWith from 'lodash/assignWith';
 
 /**
- * 合并props
+ * 合并默认值和props
  *
  * @example
  *

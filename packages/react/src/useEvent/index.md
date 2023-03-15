@@ -1,5 +1,5 @@
 ---
-title: useEvent
+title: useEvent 解决闭包陷阱
 group:
     title: react
     path: /react
@@ -9,14 +9,14 @@ group:
 
 返回一个函数，自动 useCallback 解决闭包陷阱
 
-## API
+#### 例子
 
 ```ts
 useEvent(fn);
 ```
 
-### Params
+#### 参数
 
-| 参数 | 说明 | 类型                     | 默认值 |
-| ---- | ---- | ------------------------ | ------ |
-| fn   | 方法 | (...args: any[]) => void | -      |
+| 参数 | 说明 |           类型           | 默认值 |
+| :--: | :--: | :----------------------: | :----: |
+|  fn  | 方法 | (...args: any[]) => void |   -    |
