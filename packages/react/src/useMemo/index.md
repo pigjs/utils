@@ -12,7 +12,11 @@ group:
 #### 例子
 
 ```ts
-const data = useMemo(()=>count,[count](prev,next)=>prev !== next)
+const data = useMemo(
+    () => count,
+    [count],
+    (prev, next) => prev !== next
+);
 ```
 
 #### 参数

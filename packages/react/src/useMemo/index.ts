@@ -10,7 +10,7 @@ interface Cache<Value, Condition> {
  *
  * @example
  *
- *  const data = useMemo(()=>count,[count](prev,next)=>prev !== next)
+ *  const data = useMemo(()=>count,[count],(prev,next)=>prev !== next)
  */
 
 export function useMemo<Value, Condition = any[]>(
