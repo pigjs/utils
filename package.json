@@ -30,12 +30,12 @@
         "packages/*"
     ],
     "scripts": {
-        "build": "lerna run build",
+        "build": "pnpm -r run build",
         "build:docs": "dumi build",
         "clear": "rimraf packages/*/{es,lib,node_modules} && rimraf node_modules",
         "commit-msg": "pig-fabric --hooks=commit-msg",
         "deploy": "pig-deploy deploy",
-        "doctor": "lerna run doctor",
+        "doctor": "pnpm -r run doctor",
         "init": "npm run clear && pnpm install && npm run build",
         "preinstall": "npx only-allow pnpm",
         "lint": "eslint src --ext .js,.jsx,.ts,.tsx --quiet && stylelint 'src/**/*.{less,css}'",
@@ -44,12 +44,13 @@
         "pre-commit": "pig-fabric --hooks=pre-commit && lint-staged",
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
         "prepare": "npx husky install",
-        "pub": "npm run test && npm run build && lerna publish --no-verify-access",
-        "pub:no-build": "lerna publish --no-verify-access",
+        "pub": "npm run test && npm run build && npm run pub:no-build",
+        "pub:no-build": "packages:version && pnpm publish -r",
         "start": "dumi dev",
         "test": "umi-test",
         "test:coverage": "umi-test --coverage",
-        "test:u": "umi-test -u"
+        "test:u": "umi-test -u",
+        "packages:version": "lerna version --git-tag-version=false"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,less,css,md}": "pretty-quick --staged",
