@@ -34,7 +34,7 @@
         "build:docs": "dumi build",
         "clear": "rimraf packages/*/{es,lib,node_modules} && rimraf node_modules",
         "commit-msg": "pig-fabric --hooks=commit-msg",
-        "deploy": "deploy --config=./scripts/deploy.js",
+        "deploy": "pig-deploy deploy",
         "doctor": "lerna run doctor",
         "init": "npm run clear && pnpm install && npm run build",
         "preinstall": "npx only-allow pnpm",
@@ -60,6 +60,7 @@
         "@babel/runtime": "^7.20.13"
     },
     "devDependencies": {
+        "@pigjs/deploy": "^2.0.0",
         "@pigjs/fabric": "^1.0.1",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
