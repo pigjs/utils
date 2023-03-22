@@ -52,7 +52,7 @@ importers:
   packages/browser:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/type-utils': ^1.0.4
+      '@pigjs/type-utils': ^1.0.5
       qs: ^6.11.0
     dependencies:
       '@babel/runtime': 7.20.13
@@ -62,7 +62,7 @@ importers:
   packages/practical:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/type-utils': workspace:^1.0.4
+      '@pigjs/type-utils': workspace:^1.0.5
     dependencies:
       '@babel/runtime': 7.20.13
       '@pigjs/type-utils': link:../type
@@ -70,8 +70,8 @@ importers:
   packages/react:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/browser-utils': workspace:^1.0.4
-      '@pigjs/type-utils': workspace:^1.0.4
+      '@pigjs/browser-utils': workspace:^1.0.5
+      '@pigjs/type-utils': workspace:^1.0.5
       classnames: ^2.3.2
     dependencies:
       '@babel/runtime': 7.20.13
@@ -88,10 +88,10 @@ importers:
   packages/utils:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/browser-utils': workspace:^1.0.4
-      '@pigjs/practical-utils': workspace:^1.0.2
-      '@pigjs/react-utils': workspace:^1.0.4
-      '@pigjs/type-utils': workspace:^1.0.4
+      '@pigjs/browser-utils': workspace:^1.0.5
+      '@pigjs/practical-utils': workspace:^1.0.3
+      '@pigjs/react-utils': workspace:^1.0.5
+      '@pigjs/type-utils': workspace:^1.0.5
     dependencies:
       '@babel/runtime': 7.20.13
       '@pigjs/browser-utils': link:../browser

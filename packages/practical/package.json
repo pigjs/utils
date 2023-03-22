@@ -1,6 +1,6 @@
 {
     "name": "@pigjs/practical-utils",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "js utility method",
     "keywords": [
         "practical"
@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/type-utils": "workspace:^1.0.4"
+        "@pigjs/type-utils": "workspace:^1.0.5"
     },
     "peerDependencies": {
         "lodash": ">=4.0.0"

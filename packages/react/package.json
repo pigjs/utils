@@ -1,6 +1,6 @@
 {
     "name": "@pigjs/react-utils",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "react utility function",
     "keywords": [
         "react",
@@ -22,8 +22,8 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13",
-        "@pigjs/browser-utils": "workspace:^1.0.4",
-        "@pigjs/type-utils": "workspace:^1.0.4",
+        "@pigjs/browser-utils": "workspace:^1.0.5",
+        "@pigjs/type-utils": "workspace:^1.0.5",
         "classnames": "^2.3.2"
     },
     "peerDependencies": {
