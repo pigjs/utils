@@ -45,5 +45,6 @@
     -   isRegExp 检查输入的值是否为 正则
     -   isString 检查输入的值是否为 字符串
     -   isUndefined 检查输入的值是否为 undefined
+    -   isMap 检查输入值是否为 Map
 
 查看我们的网站[@pigjs/utils](http://utils.pigjs.com/)了解更多信息

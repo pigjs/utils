@@ -6,6 +6,6 @@
  *  isUndefined(undefined); //=>true
  *  isUndefined(null); //=>false
  */
-export function isUndefined(value: any): value is string {
+export function isUndefined(value: any): value is undefined {
     return value === undefined;
 }
