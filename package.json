@@ -53,9 +53,12 @@
         "packages:version": "lerna version --git-tag-version=false"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,less,css,md}": "pretty-quick --staged",
         "*.{js,jsx,ts,tsx}": "eslint --fix --quiet",
-        "*.{css,less}": "stylelint"
+        "*.{css,less}": [
+            "pretty-quick --staged",
+            "stylelint"
+        ],
+        "*.md": "pretty-quick --staged"
     },
     "dependencies": {
         "@babel/runtime": "^7.20.13"
