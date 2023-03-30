@@ -5,12 +5,18 @@
  *
  *  attachPropertiesToComponent(Form,{Item,Group})
  */
-export function attachPropertiesToComponent<C, P extends Record<string, any>>(component: C, properties: P): C & P {
+export function attachPropertiesToComponent<ComponentType, PropertiesType extends Record<string, any>>(
+    component: ComponentType,
+    properties: PropertiesType
+): ComponentType & PropertiesType {
     const ret = component as any;
-    for (const key in properties) {
-        if (properties.hasOwnProperty(key)) {
-            ret[key] = properties[key];
-        }
-    }
+    Object.entries(properties).forEach(([key, value]) => {
+        Object.defineProperty(ret, key, {
+            value,
+            writable: false,
+            enumerable: true,
+            configurable: false
+        });
+    });
     return ret;
 }

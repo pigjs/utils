@@ -33,4 +33,28 @@ describe('useMemo', () => {
         expect(prevValue).toBe(9);
         expect(nextValue).toBe(11);
     });
+    it('should not recompute the value when dependencies do not change', () => {
+        let computeCount = 0;
+        const hook = renderHook(() => {
+            const [count, setCount] = useState(10);
+
+            const value = useMemo(() => {
+                computeCount++;
+                return count;
+            }, [count]);
+            return {
+                count,
+                setCount,
+                value
+            };
+        });
+
+        expect(hook.result.current.value).toBe(10);
+        expect(computeCount).toBe(1);
+
+        act(() => hook.result.current.setCount(10));
+
+        expect(hook.result.current.value).toBe(10);
+        expect(computeCount).toBe(1);
+    });
 });

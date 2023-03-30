@@ -1,28 +1,34 @@
-import { act, renderHook } from '@testing-library/react';
-import { useEffect, useState } from 'react';
+import { renderHook } from '@testing-library/react';
 import { useEvent } from '../index';
 
 describe('useEvent', () => {
-    it('test useEvent', () => {
-        const fn = jest.fn();
-        const hook = renderHook(() => {
-            const [count, setCount] = useState(0);
-            const fnEvent = useEvent(() => fn(count));
-            useEffect(() => {
-                return () => {
-                    fnEvent();
-                };
-            }, []);
-            return {
-                count,
-                setCount
-            } as const;
+    it('should correctly capture the latest callback', () => {
+        const { result, rerender } = renderHook(({ callback }) => useEvent(callback), {
+            initialProps: { callback: () => 'initial' }
         });
-        act(() => {
-            hook.result.current.setCount(1);
+
+        const callback1 = result.current;
+        expect(callback1()).toBe('initial');
+
+        rerender({ callback: () => 'updated' });
+
+        // Ensure the same callback is returned after the update
+        expect(result.current).toBe(callback1);
+
+        // Ensure the callback now returns the updated value
+        expect(callback1()).toBe('updated');
+    });
+
+    it('should not change the callback reference on unrelated updates', () => {
+        const { result, rerender } = renderHook(({ callback }) => useEvent(callback), {
+            initialProps: { callback: () => {} }
         });
-        expect(hook.result.current.count).toBe(1);
-        hook.unmount();
-        expect(fn).toHaveBeenCalledWith(1);
+
+        const initialCallback = result.current;
+
+        // Re-render the hook with the same callback
+        rerender({ callback: result.current });
+
+        expect(result.current).toBe(initialCallback);
     });
 });

@@ -17,7 +17,7 @@ attachPropertiesToComponent(Form, { Item, Group });
 
 #### 参数
 
-|    参数    |    说明    |        类型         | 默认值 |
-| :--------: | :--------: | :-----------------: | :----: |
-| component  |    组件    |          C          |   -    |
-| properties | 连接的属性 | Record<string, any> |   -    |
+|    参数    |        说明        |        类型         | 默认值 |
+| :--------: | :----------------: | :-----------------: | :----: |
+| component  |  要附加属性的组件  |    ComponentType    |   -    |
+| properties | 要连接到组件的属性 | Record<string, any> |   -    |

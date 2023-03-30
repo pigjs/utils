@@ -7,12 +7,12 @@ import { useCallback, useRef } from 'react';
  *
  *  useEvent(fn)
  */
-export function useEvent(callback: (...args: any[]) => void): (...args: any[]) => void {
+export function useEvent<T extends (...args: any[]) => any>(callback: T): T {
     const callbackRef = useRef<any>(null);
 
     callbackRef.current = callback;
 
-    return useCallback((...args: any[]) => {
+    return useCallback((...args: Parameters<T>) => {
         return callbackRef.current(...args);
-    }, []);
+    }, []) as T;
 }

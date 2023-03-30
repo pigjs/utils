@@ -12,7 +12,7 @@ describe('usePropsValue', () => {
         });
     };
 
-    it('should support controlled', () => {
+    it('should handle controlled components correctly', () => {
         const fn = jest.fn();
         const hook = setUp({ value: 22, onChange: (value) => fn(value) });
         expect(hook.result.current.value).toBe(22);
@@ -22,24 +22,33 @@ describe('usePropsValue', () => {
         hook.rerender({ value: 23, onChange: (value) => fn(value) });
         expect(hook.result.current.value).toBe(23);
     });
-    it('uncontrolled should be supported', () => {
-        const hook = setUp();
+    it('should handle uncontrolled components correctly', () => {
         const fn = jest.fn();
-        hook.rerender({ onChange: () => fn() });
+        const hook = setUp({ onChange: (value) => fn(value) });
+
         expect(hook.result.current.value).toBeUndefined();
+
         act(() => hook.result.current.setValue(22));
+
         expect(hook.result.current.value).toBe(22);
         expect(fn).toBeCalledTimes(1);
+        expect(fn).toHaveBeenCalledWith(22);
     });
 
-    it('default values should be supported', () => {
+    it('should support default values', () => {
         const hook = setUp({ defaultValue: 22 });
         expect(hook.result.current.value).toBe(22);
     });
 
-    it('function updates should be supported', () => {
+    it('should support function updates', () => {
         const hook = setUp({ defaultValue: 22 });
         act(() => hook.result.current.setValue((state) => state + 1));
         expect(hook.result.current.value).toBe(23);
+    });
+
+    it('should support undefined as a default value', () => {
+        const hook = setUp({ defaultValue: undefined });
+
+        expect(hook.result.current.value).toBeUndefined();
     });
 });

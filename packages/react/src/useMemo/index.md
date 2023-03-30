@@ -5,7 +5,7 @@ group:
     path: /react
 ---
 
-# useMemo
+# useMemo Hook
 
 缓存计算结果，自定义更新
 
@@ -21,8 +21,8 @@ const data = useMemo(
 
 #### 参数
 
-|     参数     |    说明    |                     类型                      | 默认值 |
-| :----------: | :--------: | :-------------------------------------------: | :----: |
-|      fn      |  计算结果  |                  () => Value                  |   -    |
-|  condition   |   依赖项   |                   Condition                   |   -    |
-| shouldUpdate | 自定义更新 | (prev: Condition, next: Condition) => boolean |   -    |
+| 参数 | 说明 | 类型 | 默认值 |
+| :-: | :-: | :-: | :-: |
+| computeValue | 用于计算缓存值的函数 | () => Value | - |
+| dependencies | 用于比较的依赖项 | Dependencies | - |
+| shouldUpdate | 自定义依赖项比较的函数 | (prevDependencies: Dependencies, nextDependencies: Dependencies) => boolean | - |
