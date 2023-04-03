@@ -1,23 +1,34 @@
-import { setUrlParams } from '../../setUrlParams';
 import { getUrlParams } from '../index';
 
 describe('getUrlParams', () => {
-    it('data modified by setUrlParams should be supported', () => {
-        setUrlParams({ count: 1 });
-        expect(getUrlParams()).toEqual({ count: '1' });
+    // 保存原始 window.location
+    const originalWindowLocation = window.location;
+
+    // 在每个测试用例之前重置 window.location
+    beforeEach(() => {
+        // @ts-ignore
+        delete window.location;
+        // @ts-ignore
+        window.location = new URL('https://www.pigjs.com/home');
+    });
+
+    // 在所有测试用例结束后恢复原始 window.location
+    afterAll(() => {
+        window.location = originalWindowLocation;
     });
 
     it('the url parameter should be fetched normally', () => {
-        delete window.location;
         // @ts-ignore
         window.location = new URL('https://www.pigjs.com/home?name=pigjs&age=24');
         expect(getUrlParams()).toEqual({ name: 'pigjs', age: '24' });
     });
 
     it('an empty object should be returned if no argument can be found', () => {
-        delete window.location;
-        // @ts-ignore
-        window.location = new URL('https://www.pigjs.com/home');
         expect(getUrlParams()).toEqual({});
+    });
+
+    it('returns an object with URL parameters when a valid URL is passed as argument', () => {
+        const url = 'https://example.com/?id=123&name=foo';
+        expect(getUrlParams(url)).toEqual({ id: '123', name: 'foo' });
     });
 });

@@ -36,7 +36,9 @@ export function useUrlState<T extends Record<string, any>>(initialState?: T | ((
     const _setState: SetMergeStateType<T> = useEvent((patch, callback) => {
         const _callback = (state) => {
             setUrlParams(state);
-            callback?.(state);
+            if (isFunction(callback)) {
+                callback(state);
+            }
         };
         setState(patch, _callback);
     });

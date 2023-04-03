@@ -7,10 +7,11 @@ group:
 
 # getUrlParams
 
-获取 url 所有参数
+获取 url 所有参数，并以键值对对象的形式返回。
 
 #### 例子
 
 ```ts
-getUrlParams(); //=> {[key]:value}
+// 假设当前 URL 为：https://www.example.com/home?name=pigjs&age=24
+const params = getUrlParams(); //=> { name: 'pigjs', age: '24' }
 ```

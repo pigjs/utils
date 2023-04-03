@@ -1,19 +1,21 @@
 /**
- * 获取url所有参数
+ * 获取 URL 中所有参数，并返回一个对象
  *
  * @example
  *
- *  getUrlParams(); //=> {[key]:value}
+ *  getUrlParams(); //=> {key: value}
+ *  getUrlParams('https://example.com/?id=123&name=foo'); //=> {id: '123', name: 'foo'}
  */
-export function getUrlParams<T extends Record<any, string>>() {
-    const url = location.search || location.hash.substring(location.hash.search(/\?/) + 1); // 获取url中"?"符后的字串
-    const params: Record<any, string> = {};
-    const str = url.indexOf('?') !== -1 ? url.substr(1) : url;
-    const strs = str.split('&');
-    for (let i = 0; i < strs.length; i++) {
-        if (strs[i].split('=')[1]) {
-            params[strs[i].split('=')[0]] = decodeURIComponent(strs[i].split('=')[1]);
-        }
+export function getUrlParams(url?: string): Record<string, string> {
+    const str =
+        new URL(url ?? location.href).search ||
+        new URL(url ?? location.href).hash.substring(location.hash.search(/\?/) + 1);
+    const urlSearchParams = new URLSearchParams(str);
+    const params: Record<string, string> = {};
+
+    for (const [key, value] of urlSearchParams.entries()) {
+        params[key] = value;
     }
-    return params as T;
+
+    return params;
 }

@@ -3,6 +3,7 @@ import { isEmptyString } from '../index';
 describe('isEmptyString', () => {
     it('should return `true` for emptyString', () => {
         expect(isEmptyString('')).toBe(true);
+        expect(isEmptyString('  ')).toBe(true);
         expect(isEmptyString(Object(''))).toBe(true);
     });
 

@@ -12,6 +12,32 @@ describe('useSetState', () => {
         });
     };
 
+    it('empty object as initial value', () => {
+        const hook = setUp({});
+        expect(hook.result.current.state).toEqual({});
+    });
+
+    it('null as initial value', () => {
+        const hook = setUp(null);
+        expect(hook.result.current.state).toEqual(null);
+    });
+
+    it('nested object as initial value or state update', () => {
+        const hook = setUp({ info: { name: 'pigjs', age: 24 } });
+        expect(hook.result.current.state).toEqual({ info: { name: 'pigjs', age: 24 } });
+
+        act(() => hook.result.current.setState({ info: { name: 'pigjs-updated', age: 25 } }));
+        expect(hook.result.current.state).toEqual({ info: { name: 'pigjs-updated', age: 25 } });
+    });
+
+    it('multiple keys update', () => {
+        const hook = setUp({ age: 24, name: 'pigjs' });
+        expect(hook.result.current.state).toEqual({ age: 24, name: 'pigjs' });
+
+        act(() => hook.result.current.setState({ age: 25, name: 'pigjs-updated' }));
+        expect(hook.result.current.state).toEqual({ age: 25, name: 'pigjs-updated' });
+    });
+
     it('initial values should be supported', () => {
         const hook = setUp({ age: 24 });
         expect(hook.result.current.state).toEqual({ age: 24 });

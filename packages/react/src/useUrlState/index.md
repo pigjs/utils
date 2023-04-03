@@ -14,7 +14,7 @@ group:
 ```ts
 const [state, setState] = useUrlState({ count: 0 });
 
-setState({ count: 1 }, (state) => xxx);
+setState({ count: 1 }, (state) => console.log(state));
 setState((state) => ({ ...state, count: 22 }));
 ```
 

@@ -1,7 +1,7 @@
-import { isNumber } from '@pigjs/type-utils';
+import { isEmptyString, isNumber, isString } from '@pigjs/type-utils';
 
 /**
- * 金额中文大写
+ * 将给定的数字转换成金额中文大写
  *
  * @example
  *
@@ -11,9 +11,12 @@ import { isNumber } from '@pigjs/type-utils';
  *  digitUppercase(0); //=>零元整
  */
 export function digitUppercase(money: number | string): undefined | string {
+    if ((!isNumber(money) && !isString(money)) || isEmptyString(money)) {
+        return '';
+    }
     let value = Number(money);
     if (!isNumber(value)) {
-        return undefined;
+        return '';
     }
     const fraction = ['角', '分'];
     const digit = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'];

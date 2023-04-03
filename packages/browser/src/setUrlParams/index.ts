@@ -12,35 +12,21 @@ import { getUrlParams } from '../getUrlParams';
  *  setUrlParams({name:'xxx'})
  *  setUrlParams({name:'xxx'},(params)=>params)
  */
-export function setUrlParams(data: Record<string, any> = {}, filter?: (params: Record<any, any>) => Record<any, any>) {
-    let params = getUrlParams();
-    params = { ...params, ...data };
-    if (filter) {
-        params = filter(params);
-    } else {
-        params = Object.keys(params)
-            .filter((key) => {
-                const value = params[key];
-                if (isEmptyString(value)) {
-                    return false;
-                }
-                if (isNull(value)) {
-                    return false;
-                }
-                if (isUndefined(value)) {
-                    return false;
-                }
-                return true;
-            })
-            .reduce((data, key) => {
-                return {
-                    ...data,
-                    [key]: params[key]
-                };
-            }, {});
-    }
-    const paramsStr = qs.stringify(params);
-    const pathname = location.hash || location.pathname;
-    const [url] = pathname.split('?');
-    history.replaceState(null, '', `${url}?${paramsStr}`);
+export function setUrlParams(
+    data: Record<string, any> = {},
+    filter?: (params: Record<any, any>) => Record<any, any>,
+    url?: string
+) {
+    const _url = new URL(url ?? location.href);
+    const params = { ...getUrlParams(url), ...data };
+    const filteredParams = filter
+        ? filter(params)
+        : Object.entries(params)
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
+              .filter(([_, value]) => !(isEmptyString(value) || isNull(value) || isUndefined(value)))
+              .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});
+    const paramsStr = qs.stringify(filteredParams);
+    const currentUrl = _url.hash || _url.pathname;
+    const [baseUrl] = currentUrl.split('?');
+    history.replaceState(null, '', `${baseUrl}?${paramsStr}`);
 }

@@ -1,4 +1,4 @@
-import { isNumber } from '@pigjs/type-utils';
+import { isNil, isNumber } from '@pigjs/type-utils';
 
 /**
  * 金额添加千分号
@@ -14,9 +14,12 @@ import { isNumber } from '@pigjs/type-utils';
  *  formatMoney(0); //=> 0
  */
 export function formatMoney(num: number | string): undefined | string | number {
+    if (isNil(num)) {
+        return undefined;
+    }
     const value = Number(num);
     if (!isNumber(value)) {
-        return undefined;
+        throw new Error(`Invalid input "${num}", expected number or string`);
     }
     // TODO 小数点后14位数以上的存在精度问题
     const moneys = num.toString().split('.');

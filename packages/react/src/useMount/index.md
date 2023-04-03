@@ -5,7 +5,7 @@ group:
     path: /react
 ---
 
-# useMount
+# useMount Hook
 
 只在组件 mount 时执行的 hook
 

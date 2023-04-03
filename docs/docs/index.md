@@ -25,3 +25,7 @@ import { isNull } from '@pigjs/utils';
 # 按需加载
 
 @pigjs/utils 默认支持基于 ES modules 的 tree shaking，直接引入 import {isNull} from '@pigjs/utils' 就会有按需加载的效果
+
+# npm 包地址
+
+[@pigjs/type-utils](https://www.npmjs.com/package/@pigjs/type-utils) [@pigjs/browser-utils](https://www.npmjs.com/package/@pigjs/browser-utils) [@pigjs/practical-utils](https://www.npmjs.com/package/@pigjs/practical-utils) [@pigjs/react-utils](https://www.npmjs.com/package/@pigjs/react-utils)

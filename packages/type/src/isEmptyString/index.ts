@@ -8,8 +8,8 @@ import { isString } from '../isString';
  *  isEmptyString(''); //=>true
  *  isEmptyString(Object('')); //=>true
  *  isEmptyString('0'); //=>false
- *  isEmptyString(' '); //=>false
+ *  isEmptyString(' '); //=>true
  */
 export function isEmptyString(value: any) {
-    return isString(value) && value.toString() === '';
+    return isString(value) && value.toString().trim() === '';
 }
