@@ -45,7 +45,7 @@
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
         "prepare": "npx husky install",
         "pub": "npm run test && npm run build && npm run pub:no-build",
-        "pub:no-build": "npm run packages:version && pnpm publish -r",
+        "pub:no-build": "npm run packages:version && pnpm publish -r --no-git-checks",
         "start": "dumi dev",
         "test": "umi-test",
         "test:coverage": "umi-test --coverage",
