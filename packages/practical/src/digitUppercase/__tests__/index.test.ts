@@ -1,4 +1,4 @@
-import { digitUppercase } from '../index';
+import { digitUppercase } from '..';
 
 describe('digitUppercase', () => {
     it('should convert integer correctly', () => {
@@ -32,13 +32,18 @@ describe('digitUppercase', () => {
         expect(digitUppercase(10000000.0)).toBe('壹仟万元整');
         expect(digitUppercase(100000000.0)).toBe('壹亿元整');
         expect(digitUppercase(1000000000.0)).toBe('壹拾亿元整');
-        expect(digitUppercase(0.01)).toBe('壹分');
+        expect(digitUppercase(0.01)).toBe('零壹分');
         expect(digitUppercase(0.1)).toBe('壹角');
         expect(digitUppercase(0.0)).toBe('零元整');
-        // expect(digitUppercase(1.01)).toBe('壹元零壹分');
+        expect(digitUppercase(1.01)).toBe('壹元零壹分');
         expect(digitUppercase(10.1)).toBe('壹拾元壹角');
-        // expect(digitUppercase(100.01)).toBe('壹佰元零壹分');
-        // expect(digitUppercase(123456789.01)).toBe('壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分');
+        expect(digitUppercase(100.01)).toBe('壹佰元零壹分');
+        expect(digitUppercase(123456789.01)).toBe('壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分');
+    });
+
+    it('The semicolon amount should be converted correctly', () => {
+        expect(digitUppercase('1000,0')).toBe('壹万元整');
+        expect(digitUppercase('123,456,789.01')).toBe('壹亿贰仟叁佰肆拾伍万陆仟柒佰捌拾玖元零壹分');
     });
 
     it('should handle invalid input', () => {
