@@ -44,7 +44,7 @@
         "pre-commit": "pig-fabric --hooks=pre-commit && lint-staged",
         "pre-merge-commit": "pig-fabric --hooks=pre-merge-commit",
         "prepare": "npx husky install",
-        "pub": "npm run test && npm run build && npm run pub:no-build",
+        "pub": "pnpm install && npm run test && npm run build && npm run pub:no-build",
         "pub:no-build": "npm run packages:version && pnpm publish -r --no-git-checks",
         "start": "dumi dev",
         "test": "umi-test",

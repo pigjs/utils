@@ -52,7 +52,7 @@ importers:
   packages/browser:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/type-utils': ^1.1.0
+      '@pigjs/type-utils': ^1.2.0
       qs: ^6.11.0
     dependencies:
       '@babel/runtime': 7.20.13
@@ -62,7 +62,7 @@ importers:
   packages/practical:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/type-utils': workspace:^1.1.0
+      '@pigjs/type-utils': workspace:^1.2.0
     dependencies:
       '@babel/runtime': 7.20.13
       '@pigjs/type-utils': link:../type
@@ -70,8 +70,8 @@ importers:
   packages/react:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/browser-utils': workspace:^1.1.0
-      '@pigjs/type-utils': workspace:^1.1.0
+      '@pigjs/browser-utils': workspace:^1.2.0
+      '@pigjs/type-utils': workspace:^1.2.0
       classnames: ^2.3.2
     dependencies:
       '@babel/runtime': 7.20.13
@@ -88,10 +88,10 @@ importers:
   packages/utils:
     specifiers:
       '@babel/runtime': ^7.20.13
-      '@pigjs/browser-utils': workspace:^1.1.0
-      '@pigjs/practical-utils': workspace:^1.1.0
-      '@pigjs/react-utils': workspace:^1.1.0
-      '@pigjs/type-utils': workspace:^1.1.0
+      '@pigjs/browser-utils': workspace:^1.2.0
+      '@pigjs/practical-utils': workspace:^1.2.0
+      '@pigjs/react-utils': workspace:^1.2.0
+      '@pigjs/type-utils': workspace:^1.2.0
     dependencies:
       '@babel/runtime': 7.20.13
       '@pigjs/browser-utils': link:../browser
@@ -11041,7 +11041,7 @@ packages:
     dev: true
 
   /image-size/0.5.5:
-    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
+    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -14329,7 +14329,7 @@ packages:
     dev: true
 
   /node-notifier/8.0.2:
-    resolution: {integrity: sha512-oJP/9NAdd9+x2Q+rfphB2RJCHjod70RcRLjosiPMMu5gjIfwVnOUGq2nbTjTUbmy0DJ/tFIVT30+Qe3nzl4TJg==}
+    resolution: {integrity: sha1-8xZ6OO8NLIqGaoPjGMG6Dv63AsU=}
     requiresBuild: true
     dependencies:
       growly: 1.3.0
