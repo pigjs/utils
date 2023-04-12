@@ -1,11 +1,21 @@
 import { sleep } from '../index';
 
 describe('sleep', () => {
-    it('whether sleep is normal', async () => {
-        const startTime = Date.now();
-        await sleep(1000);
-        const endTime = Date.now();
-        const time = endTime - startTime;
-        expect(time > 1000).toBe(true);
+    beforeEach(() => {
+        jest.useFakeTimers();
+    });
+
+    afterEach(() => {
+        jest.runAllTimers();
+    });
+
+    it('whether sleep is normal', () => {
+        const mockFn = jest.fn();
+        sleep(1000).then(() => {
+            mockFn();
+            expect(mockFn).toHaveBeenCalled();
+        });
+        expect(mockFn).not.toHaveBeenCalled();
+        jest.runAllTimers();
     });
 });
