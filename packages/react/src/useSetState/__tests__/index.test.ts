@@ -69,4 +69,23 @@ describe('useSetState', () => {
         expect(fn).toBeCalledTimes(1);
         expect(fn).toHaveBeenCalledWith({ age: 25 });
     });
+
+    it('State override should be supported when it is not an object', () => {
+        // number
+        const hook = setUp(0);
+        act(() => hook.result.current.setState(2));
+        expect(hook.result.current.state).toBe(2);
+        // boolean
+        const hook2 = setUp(false);
+        act(() => hook2.result.current.setState(true));
+        expect(hook2.result.current.state).toBe(true);
+        // array
+        const hook3 = setUp([1, 2]);
+        act(() => hook3.result.current.setState([4, 5]));
+        expect(hook3.result.current.state).toEqual([4, 5]);
+        // string
+        const hook4 = setUp('叶小秋');
+        act(() => hook4.result.current.setState('pigjs'));
+        expect(hook4.result.current.state).toBe('pigjs');
+    });
 });
