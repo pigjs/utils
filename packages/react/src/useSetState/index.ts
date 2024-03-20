@@ -25,6 +25,9 @@ export function useSetState<T>(initialState: T = {} as T): [T, SetMergeStateType
     }, [state]);
 
     const setMergeState: SetMergeStateType<T> = useEvent((patch, callback) => {
+        if (callback) {
+            callbackRef.current = callback;
+        }
         setState((prevState) => {
             const value = isFunction(patch) ? patch(prevState) : patch;
             // 如果上一次的值 和 当前需要修改的值都是 对象的话，就会合并，反之就会替换
@@ -33,9 +36,6 @@ export function useSetState<T>(initialState: T = {} as T): [T, SetMergeStateType
             }
             return value;
         });
-        if (callback) {
-            callbackRef.current = callback;
-        }
     });
 
     return [state, setMergeState];
